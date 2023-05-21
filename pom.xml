@@ -6,6 +6,7 @@
     <modules>
         <module>cv-generator-web</module>
 		<module>cv-generator-data</module>
+		<module>cv-generator-security</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
