@@ -1,10 +1,7 @@
 package com.cvgenerator.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -20,4 +17,11 @@ public class ProfessionalTitle extends BaseEntity{
 
     @Column(name = "title")
     private String title;
+
+    @Builder
+    public ProfessionalTitle(Long id, User user, String title) {
+        super(id);
+        this.user = user;
+        this.title = title;
+    }
 }
