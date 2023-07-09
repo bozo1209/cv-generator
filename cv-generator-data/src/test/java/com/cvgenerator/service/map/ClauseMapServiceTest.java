@@ -54,8 +54,6 @@ class ClauseMapServiceTest {
         String clauseText = "clause 3";
         Clause savedClause = clauseMapService.save(Clause.builder().clause(clauseText).build());
 
-        System.out.println("id " + savedClause.getId());
-
         assertNotNull(savedClause);
         assertNotNull(savedClause.getId());
         assertEquals(clauseText, savedClause.getClause());
