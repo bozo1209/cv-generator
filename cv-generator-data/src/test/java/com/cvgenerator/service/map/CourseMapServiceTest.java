@@ -61,6 +61,11 @@ class CourseMapServiceTest {
     }
 
     @Test
+    void saveCourseNull(){
+        assertThrows(RuntimeException.class, () -> courseMapService.save(null));
+    }
+
+    @Test
     void delete() {
         courseMapService.delete(course);
 

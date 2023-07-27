@@ -60,6 +60,11 @@ class ClauseMapServiceTest {
     }
 
     @Test
+    void saveClauseNull(){
+        assertThrows(RuntimeException.class, () -> clauseMapService.save(null));
+    }
+
+    @Test
     void delete() {
         clauseMapService.delete(clause);
 

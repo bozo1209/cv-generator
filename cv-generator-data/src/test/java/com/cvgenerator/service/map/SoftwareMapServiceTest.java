@@ -60,6 +60,11 @@ class SoftwareMapServiceTest {
     }
 
     @Test
+    void saveSoftwareNull(){
+        assertThrows(RuntimeException.class, () -> softwareMapService.save(null));
+    }
+
+    @Test
     void delete() {
         softwareMapService.delete(software);
 

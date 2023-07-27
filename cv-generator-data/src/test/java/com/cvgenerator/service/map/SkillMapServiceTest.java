@@ -60,6 +60,11 @@ class SkillMapServiceTest {
     }
 
     @Test
+    void saveSkillNull(){
+        assertThrows(RuntimeException.class, () -> skillMapService.save(null));
+    }
+
+    @Test
     void delete() {
         skillMapService.delete(skill);
 

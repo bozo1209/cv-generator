@@ -60,6 +60,11 @@ class LanguageMapServiceTest {
     }
 
     @Test
+    void saveLanguageNull(){
+        assertThrows(RuntimeException.class, () -> languageMapService.save(null));
+    }
+
+    @Test
     void delete() {
         languageMapService.delete(language);
 

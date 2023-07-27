@@ -60,6 +60,11 @@ class ExperienceMapServiceTest {
     }
 
     @Test
+    void saveExperienceNull(){
+        assertThrows(RuntimeException.class, () -> experienceMapService.save(null));
+    }
+
+    @Test
     void delete() {
         experienceMapService.delete(experience);
 

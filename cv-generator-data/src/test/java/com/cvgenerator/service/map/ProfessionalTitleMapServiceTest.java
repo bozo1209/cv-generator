@@ -60,6 +60,11 @@ class ProfessionalTitleMapServiceTest {
     }
 
     @Test
+    void saveProfessionalTitleNull(){
+        assertThrows(RuntimeException.class, () -> professionalTitleMapService.save(null));
+    }
+
+    @Test
     void delete() {
         professionalTitleMapService.delete(professionalTitle);
 
