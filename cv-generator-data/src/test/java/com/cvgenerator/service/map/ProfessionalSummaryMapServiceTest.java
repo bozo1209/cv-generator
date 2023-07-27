@@ -60,6 +60,11 @@ class ProfessionalSummaryMapServiceTest {
     }
 
     @Test
+    void saveProfessionalSummaryNull(){
+        assertThrows(RuntimeException.class, () -> professionalSummaryMapService.save(null));
+    }
+
+    @Test
     void delete() {
         professionalSummaryMapService.delete(professionalSummary);
 

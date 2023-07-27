@@ -60,6 +60,11 @@ class EducationMapServiceTest {
     }
 
     @Test
+    void saveEducationNull(){
+        assertThrows(RuntimeException.class, () -> educationMapService.save(null));
+    }
+
+    @Test
     void delete() {
         educationMapService.delete(education);
 

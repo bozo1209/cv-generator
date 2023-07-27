@@ -60,6 +60,11 @@ class PersonalInfoMapServiceTest {
     }
 
     @Test
+    void savePersonalInfoNull(){
+        assertThrows(RuntimeException.class, () -> personalInfoMapService.save(null));
+    }
+
+    @Test
     void delete() {
         personalInfoMapService.delete(personalInfo);
 

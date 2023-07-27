@@ -60,6 +60,11 @@ class InterestMapServiceTest {
     }
 
     @Test
+    void saveInterestNull(){
+        assertThrows(RuntimeException.class, () -> interestMapService.save(null));
+    }
+
+    @Test
     void delete() {
         interestMapService.delete(interest);
 

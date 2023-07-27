@@ -60,6 +60,11 @@ class UserMapServiceTest {
     }
 
     @Test
+    void saveUserNull(){
+        assertThrows(RuntimeException.class, () -> userMapService.save(null));
+    }
+
+    @Test
     void delete() {
         userMapService.delete(user);
 
